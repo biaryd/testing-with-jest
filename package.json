@@ -14,5 +14,8 @@
     "url": "(https://github.com/biaryd/testing-with-jest)"
   },
   "author": "Bianca Rydenhov",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.13.7"
+  }
 }
