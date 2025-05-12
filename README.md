@@ -1,2 +1,2 @@
-#Course: Flerplattformsapplikationer med webbtekniker
+#Testing-with-jest
 This is a Jest + npm lab session
