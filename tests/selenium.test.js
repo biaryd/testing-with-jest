@@ -35,6 +35,6 @@ test('Push button should update stack display with correct value', async () => {
   
   // Värdet förväntas ändras till det vi angav
   expect(newValue).not.toBe(initialValue);
-  //testrad för att se att testet misslyckas
-  expect(newValue).toBe("DettaVärdeStämmerInte");
+  //korrekt förväntat värde
+  expect(newValue).toBe("TestValue");
 });
