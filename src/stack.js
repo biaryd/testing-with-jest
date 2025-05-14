@@ -16,3 +16,13 @@ exports.pop = function () {
 exports.peek = function () {
     return _.last(stack);
 }
+
+// Returnerar det minsta värdet i stacken
+exports.min = function () {
+    return Math.min(...stack);
+  }
+  
+// Returnerar det största värdet i stacken
+exports.max = function () {
+    return Math.max(...stack);
+  }
