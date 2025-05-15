@@ -34,3 +34,27 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+
+
+test('Push button should update stack display with correct value', async () => {
+    // Hämtar värdet på stacken som ligger främst
+    let initialValue = await driver.findElement(By.id('top_of_stack')).getText();
+    
+    // Klicka på push-knappen
+    let pushButton = await driver.findElement(By.id('push'));
+    await pushButton.click();
+    
+    // Hanterar en prompt dialog
+    let alert = await driver.switchTo().alert();
+    await alert.sendKeys("TestValue");
+    await alert.accept();
+    
+    // Hämtar det nya värdet på stacken
+    let newValue = await driver.findElement(By.id('top_of_stack')).getText();
+    
+    // Värdet förväntas ändras till det vi angav
+    expect(newValue).not.toBe(initialValue);
+    //korrekt förväntat värde
+    expect(newValue).toBe("TestValue");
+  });
